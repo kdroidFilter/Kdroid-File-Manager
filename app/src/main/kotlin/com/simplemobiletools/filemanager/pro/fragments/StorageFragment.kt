@@ -136,8 +136,7 @@ class StorageFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
                 imagesProgressbar.setIndicatorColor(redColor)
                 imagesProgressbar.trackColor = redColor.adjustAlpha(LOWER_ALPHA)
 
-                videosProgressbar.setIndicatorColor(greenColor)
-                videosProgressbar.trackColor = greenColor.adjustAlpha(LOWER_ALPHA)
+
 
                 audioProgressbar.setIndicatorColor(lightBlueColor)
                 audioProgressbar.trackColor = lightBlueColor.adjustAlpha(LOWER_ALPHA)
@@ -192,9 +191,6 @@ class StorageFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
                 volumes[volumeName]!!.apply {
                     imagesSize.text = fileSizeImages.formatSize()
                     imagesProgressbar.progress = (fileSizeImages / SIZE_DIVIDER).toInt()
-
-                    videosSize.text = fileSizeVideos.formatSize()
-                    videosProgressbar.progress = (fileSizeVideos / SIZE_DIVIDER).toInt()
 
                     audioSize.text = fileSizeAudios.formatSize()
                     audioProgressbar.progress = (fileSizeAudios / SIZE_DIVIDER).toInt()
@@ -309,7 +305,7 @@ class StorageFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
             post {
                 volumes[volumeName]?.apply {
                     arrayOf(
-                        mainStorageUsageProgressbar, imagesProgressbar, videosProgressbar, audioProgressbar, documentsProgressbar,
+                        mainStorageUsageProgressbar, imagesProgressbar, audioProgressbar, documentsProgressbar,
                         archivesProgressbar, othersProgressbar
                     ).forEach {
                         it.max = (totalStorageSpace / SIZE_DIVIDER).toInt()

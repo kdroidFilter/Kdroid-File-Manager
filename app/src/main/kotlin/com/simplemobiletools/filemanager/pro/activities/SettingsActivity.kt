@@ -49,7 +49,6 @@ class SettingsActivity : SimpleActivity() {
         setupFileDeletionPasswordProtection()
         setupKeepLastModified()
         setupDeleteConfirmation()
-        setupEnableRootAccess()
         updateTextColors(binding.settingsNestedScrollview)
 
         binding.apply {
@@ -253,24 +252,7 @@ class SettingsActivity : SimpleActivity() {
         }
     }
 
-    private fun setupEnableRootAccess() {
-        binding.apply {
-            settingsEnableRootAccessHolder.beVisibleIf(config.isRootAvailable)
-            settingsEnableRootAccess.isChecked = config.enableRootAccess
-            settingsEnableRootAccessHolder.setOnClickListener {
-                if (!config.enableRootAccess) {
-                    RootHelpers(this@SettingsActivity).askRootIfNeeded {
-                        toggleRootAccess(it)
-                    }
-                } else {
-                    toggleRootAccess(false)
-                }
-            }
-        }
-    }
 
-    private fun toggleRootAccess(enable: Boolean) {
-        binding.settingsEnableRootAccess.isChecked = enable
-        config.enableRootAccess = enable
-    }
+
+
 }

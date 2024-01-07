@@ -191,9 +191,7 @@ class MainActivity : SimpleActivity() {
 
             findItem(R.id.column_count).isVisible = currentViewType == VIEW_TYPE_GRID && currentFragment !is StorageFragment
 
-            findItem(R.id.more_apps_from_us).isVisible = !resources.getBoolean(R.bool.hide_google_relations)
             findItem(R.id.settings).isVisible = !isCreateDocumentIntent
-            findItem(R.id.about).isVisible = !isCreateDocumentIntent
         }
     }
 
@@ -230,9 +228,7 @@ class MainActivity : SimpleActivity() {
                     R.id.temporarily_show_hidden -> tryToggleTemporarilyShowHidden()
                     R.id.stop_showing_hidden -> tryToggleTemporarilyShowHidden()
                     R.id.column_count -> changeColumnCount()
-                    R.id.more_apps_from_us -> launchMoreAppsFromUsIntent()
                     R.id.settings -> launchSettings()
-                    R.id.about -> launchAbout()
                     else -> return@setOnMenuItemClickListener false
                 }
                 return@setOnMenuItemClickListener true
