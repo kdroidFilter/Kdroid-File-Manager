@@ -380,7 +380,7 @@ class ItemsAdapter(
             RadioItem(OPEN_AS_TEXT, res.getString(R.string.text_file)),
             RadioItem(OPEN_AS_IMAGE, res.getString(R.string.image_file)),
             RadioItem(OPEN_AS_AUDIO, res.getString(R.string.audio_file)),
-            RadioItem(OPEN_AS_VIDEO, res.getString(R.string.video_file)),
+        //    RadioItem(OPEN_AS_VIDEO, res.getString(R.string.video_file)),
             RadioItem(OPEN_AS_OTHER, res.getString(R.string.other_file))
         )
 
