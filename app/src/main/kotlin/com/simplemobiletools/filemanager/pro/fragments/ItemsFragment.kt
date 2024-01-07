@@ -218,15 +218,19 @@ class ItemsFragment(context: Context, attributeSet: AttributeSet) : MyViewPagerF
             return
         }
 
+        val videoExtensions = setOf(".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv")
         val isSortingBySize = context!!.config.getFolderSorting(currentPath) and SORT_BY_SIZE != 0
         val getProperChildCount = context!!.config.getFolderViewType(currentPath) == VIEW_TYPE_LIST
         val lastModifieds = context!!.getFolderLastModifieds(path)
 
         for (file in files) {
-            val listItem = getListItemFromFile(file, isSortingBySize, lastModifieds, false)
-            if (listItem != null) {
-                if (wantedMimeTypes.any { isProperMimeType(it, file.absolutePath, file.isDirectory) }) {
-                    items.add(listItem)
+            val fileExtension = file.extension.toLowerCase()
+            if (!videoExtensions.contains(".$fileExtension")) {
+                val listItem = getListItemFromFile(file, isSortingBySize, lastModifieds, false)
+                if (listItem != null) {
+                    if (wantedMimeTypes.any { isProperMimeType(it, file.absolutePath, file.isDirectory) }) {
+                        items.add(listItem)
+                    }
                 }
             }
         }

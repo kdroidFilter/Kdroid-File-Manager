@@ -22,7 +22,6 @@ import com.simplemobiletools.commons.helpers.*
 import com.simplemobiletools.commons.models.FAQItem
 import com.simplemobiletools.commons.models.RadioItem
 import com.simplemobiletools.commons.models.Release
-import com.simplemobiletools.filemanager.pro.BuildConfig
 import com.simplemobiletools.filemanager.pro.R
 import com.simplemobiletools.filemanager.pro.adapters.ViewPagerAdapter
 import com.simplemobiletools.filemanager.pro.databinding.ActivityMainBinding
@@ -40,6 +39,7 @@ import com.simplemobiletools.filemanager.pro.helpers.RootHelpers
 import com.simplemobiletools.filemanager.pro.interfaces.ItemOperationsListener
 import com.stericson.RootTools.RootTools
 import me.grantland.widget.AutofitHelper
+import me.grantland.widget.BuildConfig
 import java.io.File
 
 class MainActivity : SimpleActivity() {
@@ -91,7 +91,6 @@ class MainActivity : SimpleActivity() {
                     initFragments()
                     mIsPasswordProtectionPending = false
                     tryInitFileManager()
-                    checkWhatsNewDialog()
                     checkIfRootAvailable()
                     checkInvalidFavorites()
                 } else {
@@ -100,9 +99,7 @@ class MainActivity : SimpleActivity() {
             }
         }
 
-        if (isPackageInstalled("com.simplemobiletools.filemanager")) {
-            ConfirmationDialog(this, "", R.string.upgraded_from_free, R.string.ok, 0, false) {}
-        }
+
     }
 
     override fun onResume() {
@@ -794,18 +791,4 @@ class MainActivity : SimpleActivity() {
 
     private fun getTabsList() = arrayListOf(TAB_FILES, TAB_RECENT_FILES, TAB_STORAGE_ANALYSIS)
 
-    private fun checkWhatsNewDialog() {
-        arrayListOf<Release>().apply {
-            add(Release(26, R.string.release_26))
-            add(Release(28, R.string.release_28))
-            add(Release(29, R.string.release_29))
-            add(Release(34, R.string.release_34))
-            add(Release(35, R.string.release_35))
-            add(Release(37, R.string.release_37))
-            add(Release(71, R.string.release_71))
-            add(Release(75, R.string.release_75))
-            add(Release(96, R.string.release_96))
-            checkWhatsNew(this, BuildConfig.VERSION_CODE)
-        }
-    }
 }

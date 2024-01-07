@@ -147,6 +147,8 @@ class RecentsFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
         val showHidden = context?.config?.shouldShowHidden() ?: return
         val listItems = arrayListOf<ListItem>()
 
+        val videoExtensions = setOf(".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv")
+
         val uri = Files.getContentUri("external")
         val projection = arrayOf(
             FileColumns.DATA,
@@ -170,7 +172,9 @@ class RecentsFragment(context: Context, attributeSet: AttributeSet) : MyViewPage
                 if (cursor.moveToFirst()) {
                     do {
                         val path = cursor.getStringValue(FileColumns.DATA)
-                        if (File(path).isDirectory) {
+                        val fileExtension = File(path).extension
+
+                        if (File(path).isDirectory || ".$fileExtension" in videoExtensions) {
                             continue
                         }
 
