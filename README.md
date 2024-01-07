@@ -1,4 +1,4 @@
-##Kdroid File Manager
+# Kdroid File Manager
 
 Kdroid File Manager is a highly efficient and user-friendly file and folder manager for Android devices, specifically tailored to meet Kosher standards. This innovative tool is adept at compressing, transferring, and converting a variety of media files, with a specific exclusion for video files and root access, ensuring compliance with Kosher device requirements. It features a comprehensive array of file management capabilities, including the ability to customize the home folder and select favorite folders for immediate access.
 
