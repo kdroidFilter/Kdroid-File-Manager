@@ -779,16 +779,26 @@ class ItemsAdapter(
     private fun getSelectedFileDirItems() = listItems.filter { selectedKeys.contains(it.path.hashCode()) } as ArrayList<FileDirItem>
 
     fun updateItems(newItems: ArrayList<ListItem>, highlightText: String = "") {
-        if (newItems.hashCode() != currentItemsHash) {
-            currentItemsHash = newItems.hashCode()
+        // Filter out video files from the new items
+        val filteredItems = newItems.filterNot { it.isVideoFile() } as ArrayList<ListItem>
+
+        if (filteredItems.hashCode() != currentItemsHash) {
+            currentItemsHash = filteredItems.hashCode()
             textToHighlight = highlightText
-            listItems = newItems.clone() as ArrayList<ListItem>
+            listItems = ArrayList(filteredItems) // Create a new ArrayList with the filtered items
             notifyDataSetChanged()
             finishActMode()
         } else if (textToHighlight != highlightText) {
             textToHighlight = highlightText
             notifyDataSetChanged()
         }
+    }
+
+    fun ListItem.isVideoFile(): Boolean {
+        // Common video file extensions
+        val videoExtensions = setOf(".mp4", ".avi", ".mov", ".wmv", ".flv", ".mkv")
+        // Check if the file extension is one of the common video formats
+        return videoExtensions.any { this.path.endsWith(it, ignoreCase = true) }
     }
 
     fun updateFontSizes() {
