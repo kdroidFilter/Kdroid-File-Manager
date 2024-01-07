@@ -1,44 +1,18 @@
-# Simple File Manager
+# Kdroid File Manager
 
-<img alt="Logo" src="graphics/icon.png" width="120" />
+Kdroid File Manager is a swift and efficient file and folder manager for Android devices, specifically designed to align with Kosher standards. This manager excels in compressing, transferring, and converting various media files, except for videos, adhering to Kosher device requirements. It boasts all essential file management features such as home folder customization and favorite folder selection for quick access.
 
-Simple File Manager is a super quick & professional file and folder manager for Android devices. Use Simple File Manager to easily compress, transfer & convert media files with a few clicks. It has all of the major file manager & folder management features, including customizing the home folder and selecting favorite folders for quick access. 
+This manager encompasses a full range of functionalities like search, navigation, copy & paste, cut, delete, rename, decompress, transfer, download, and organization. It allows for the addition, removal, or modification of files, folders, and apps as per user preferences.
 
-The file manager provides the whole pack of file manager features, including search, navigation, copy & paste, cut, delete, rename, decompress, transfer, download, organize & so on. Add, remove, or edit files, folders & apps according to your personal preferences. 
+With its intuitive data organization, you can sort your mobile content using different metrics and toggle sorting orders. Long-pressing a file or folder enables you to quickly copy its path to the clipboard.
 
-With this easy data organizer, you can organize and sort your mobile by various metrics and toggle between ascending and descending or using a folder specific sorting. To get a file or folder path quickly, you can easily select it by long-pressing and copying it in the clipboard. 
+Kdroid File Manager simplifies organizing your mobile files, folders, and apps, saving time and energy. It provides detailed properties for files and folders, including size, last modification date, and EXIF data like creation date and camera model for photos.
 
-Simple File Manager makes organizing your mobile files, folders, and apps easy to save you both time & energy. With just a few clicks, you can also check file or folder properties, which shows various fields like the size, date of the last modification, or EXIF values like the creation date, camera model at photos, etc. 
+Security is paramount in this manager, featuring robust functions like password protection for hidden items or the entire app. Options for securing your data include patterns, pins, or fingerprints. The manager operates without internet access, enhancing privacy.
 
-This file organizer is absolutely secure, containing multiple powerful security-related functions, like password protecting hidden items, deleting, or the whole app. You can choose between using a pattern, pin, or a fingerprint to keep your data private. The fingerprint permission is needed for locking either hidden item visibility, deleting files, or the whole app. Simple File Manager works without internet access, further guaranteeing your ultimate privacy. 
+It also helps free up space and conserve internal storage by compressing files and folders. Though it supports various file formats, it excludes video files to comply with Kosher standards. Fast browsing is enabled for root files, SD cards, and USB devices.
 
-The File Manager can also clean up space and save your internal storage by compressing files & folders. This modern media file organizer supports fast browsing of root files, SD cards, and USB devices. File Manager also recognizes multiple file formats, including music, videos, images & documents. 
+Kdroid File Manager Pro offers desktop shortcuts for quick access to favorite items and includes a light file editor for document printing, editing, and reading with zoom gestures.
 
-Use Simple File Manager Pro to create handy desktop shortcuts for accessing your favorite items quickly. It contains a light file editor that you can use to print documents, edit them, or read easily using zoom gestures, whenever needed. 
+Despite its simplicity, Kdroid File Manager offers comprehensive management and customization for your files, folders, and apps. Its storage analysis feature helps identify and clean up space-consuming files.
 
-Despite called Simple File Manager, it will help you manage & customize your files, folders & apps with just a few clicks. You can easily see your recent files and do a storage analysis too.
-
-You can use the built in Storage Analysis to have a quick overview about what files are taking up the most space and clean it up. It can function as a storage cleaner that will help empty some space on your device.
-
-Contains no ads or unnecessary permissions. It is fully opensource, provides customizable colors.
-
-Check out the full suite of Simple Tools here:  
-https://www.simplemobiletools.com
-
-Facebook:  
-https://www.facebook.com/simplemobiletools
-
-Reddit:  
-https://www.reddit.com/r/SimpleMobileTools
-
-Telegram:  
-https://t.me/SimpleMobileTools
-
-<a href='https://play.google.com/store/apps/details?id=com.simplemobiletools.filemanager.pro'><img src='https://simplemobiletools.com/images/button-google-play.svg' alt='Get it on Google Play' height='45' /></a>
-<a href='https://f-droid.org/packages/com.simplemobiletools.filemanager.pro'><img src='https://simplemobiletools.com/images/button-fdroid.svg' alt='Get it on F-Droid' height='45' /></a>
-
-<div style="display:flex;">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/1_en-US.jpeg" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/3_en-US.jpeg" width="30%">
-<img alt="App image" src="fastlane/metadata/android/en-US/images/phoneScreenshots/4_en-US.jpeg" width="30%">
-</div>
